@@ -1,0 +1,48 @@
+{
+    "name": "karakushan/crud-generator",
+    "description": "Generate CRUD for your laravel application like a breeze",
+    "version": "1.0.0",
+    "keywords": [
+        "crud",
+        "crud-generator",
+        "laravel-crud-generator"
+    ],
+    "homepage": "https://github.com/karakushan/crud-generator.git",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Vitaliy Karakushan",
+            "email": "karakushan@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1|^8.0",
+        "laravel/framework": "5.*|6.*|7.*|8.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Karakushan\\CrudGenerator\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Karakushan\\CrudGenerator\\": "src/"
+        }
+    },
+    "scripts": {
+        "test": "clear && vendor/bin/phpunit --process-isolation --colors=always",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Karakushan\\CrudGenerator\\CrudGeneratorServiceProvider"
+            ]
+        }
+    }
+}
