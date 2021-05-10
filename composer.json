@@ -9,7 +9,6 @@
     ],
     "homepage": "https://github.com/karakushan/crud-generator.git",
     "license": "MIT",
-    "type": "library",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "authors": [
@@ -32,7 +31,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Karakushan\\CrudGenerator\\": "src/"
+
         }
     },
     "scripts": {
@@ -40,6 +39,9 @@
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
     },
     "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
         "laravel": {
             "providers": [
                 "Karakushan\\CrudGenerator\\CrudGeneratorServiceProvider"
