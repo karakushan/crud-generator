@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\{{modelName}};
 use Illuminate\Http\Request;
 
-class FaqController extends Controller
+class {{controllerName}}Controller extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class FaqController extends Controller
      */
     public function index()
     {
-        $title = __('Frequently Asked Questions');
+        $title = __('{{humanNamePlural}}');
         $items = {{modelName}}::orderBy('id','desc')->paginate(15);
 
         return view('{{viewBase}}.index', compact('title', 'items'));
@@ -27,7 +27,7 @@ class FaqController extends Controller
      */
     public function create()
     {
-        $title = __('Adding a FAQ');
+        $title = __('Adding a {{humanName}}');
 
         return view('{{viewBase}}.create', compact('title'));
     }
@@ -69,7 +69,7 @@ class FaqController extends Controller
     {
         $item = {{modelName}}::findOrFail($id);
 
-        $title = __('Editing {{modelName}}');
+        $title = __('Editing {{humanName}}');
 
         return view('{{viewBase}}.edit', compact('title', 'item'));
     }

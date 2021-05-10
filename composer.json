@@ -10,7 +10,7 @@
     "homepage": "https://github.com/karakushan/crud-generator.git",
     "license": "MIT",
     "type": "library",
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true,
     "authors": [
         {
